@@ -157,10 +157,10 @@ arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz > /dev/null 2>&1
 
-if [[ -e ngrok+wifi+data.zip ]]; then
-unzip ngrok+wifi+data.zip > /dev/null 2>&1
+if [[ -e ngrok+wifi+data.tgz ]]; then
+unzip ngrok+wifi+data.tgz > /dev/null 2>&1
 chmod +x ngrok
-rm -rf ngrok+wifi+data.zip
+rm -rf ngrok+wifi+data.tgz
 else
 printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
 exit 1
@@ -168,10 +168,10 @@ fi
 
 else
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz > /dev/null 2>&1 
-if [[ -e ngrok-stable-linux-arm.zip ]]; then
-unzip ngrok+wifi+data.zip > /dev/null 2>&1
+if [[ -e ngrok-stable-linux-arm.tgz ]]; then
+unzip ngrok+wifi+data.tgz > /dev/null 2>&1
 chmod +x ngrok
-rm -rf ngrok+wifi+data.zip
+rm -rf ngrok+wifi+data.tgz
 else
 printf "\e[1;93m[!] Download error... \e[0m\n"
 exit 1
